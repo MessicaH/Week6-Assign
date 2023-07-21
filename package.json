@@ -1,0 +1,20 @@
+{
+  "name": "week-06-devtools_debugging_and_unit_tests",
+  "version": "1.0.0",
+  "description": "Node install for Week6",
+  "main": "week6.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Node",
+    "Mocha",
+    "Chai"
+  ],
+  "author": "Jessica Helmers",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.3.7",
+    "mocha": "^10.2.0"
+  }
+}

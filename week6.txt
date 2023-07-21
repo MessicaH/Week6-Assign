@@ -1,0 +1,84 @@
+/* You will need to have two players with hands for playing War. That will look something like:
+    player1 =
+    player2 =
+    and then values or randomized options from deck of cards (52 total, 4 suits).
+    
+
+This will need to include deck, with values (array) of:
+    cardRank = ["2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K", "A"];
+    cardSuit = ["diamonds", "spades", "clubs", "hearts"]; 
+    
+    if cardRank is === for player1 and player2, no points to either player;
+    return (cardRank + cardSuit) = gameDeck   
+
+Will likely be using a "for" loop, while dealt # of cards from deck is available (i = 26, i--)
+    console.log for both player1 and player2 for each turn;
+
+    player#Score variable for total score (running total) - write/track as "return" until i = 0;
+
+    Math.random() for which options are part of each player's 26 cards;
+    array.pop() to remove the last item in randomized list of options for 26 cards?
+
+    const cards = [cardFace]+[cardSuit];
+        function dealCards() {
+        cards.sort(function(){return 0.5 - Math.random()});
+        }
+
+StackOverflow Notes for randomizing deck cards:
+    let rank = [ "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K", "A"];
+    let suit = ["diamonds", "spades", "clubs", "hearts"];
+    let deck= [];
+    suits.forEach(function(suit){
+        ranks.forEach(function(rank){
+        deck.push(new Card(rank, suit));
+     })
+});
+
+    function Card(rank, suit){
+    this.card = rank;
+    this.suit = suit;
+    }
+
+    function dealCard() {
+      cards.sort(function(){return 0.5 - Math.random()});
+    }
+
+Displaying the winner:
+    if player1 is > player2, then add +1 to player1Score;
+    if player1 is < player2, then add +1 to player2Score;
+    if player1 is === player2, then nothing happens (+0 or "else" statement for default);
+
+Once i = 0, then display total points for each player (alert window) at end of game 
+let winner;
+
+ Once i = 0, "winner" = ?
+    if (player1Score is > player2Score) {
+        winner = "Player 1 wins!"} else if {
+            player1Score is < player2Score;
+        winner = "Player 2 wins!"} else {
+            player1Score === player2Score;
+        winner = "Both players tied!"};
+         console.log(winner);
+
+    alert(`Player 1 has scored ${player1Score}
+    Player 2 has scored ${player2Score}
+    ${winner}`)
+        Possibly add: "Congrats " + winner + " for winning the game!"
+
+
+Summary:
+    Create a randomized deck of 52 cards, combining suits (Diamond, Spade, Heart, Club) and ranks (2, 3,...K, A)
+            This is gameDeck array
+                const gameDeck = []
+                gameDeck.sort(function(Math.random));
+
+    Then, use items listed in Deck array/object and divide between 2 players
+            This is Player1 and Player 2 items/object
+                player1Deck = gameDeck.slice(0, 25) or (0, half);
+                player2Deck = gameDeck.slice(26, gameDeck.length) or (half);
+
+            for (let i = 26; i >= playerDeck.length; i--) {
+                console.log("Round " + i);
+            }
+    Next, 
+*/
